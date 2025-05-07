@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="hero-header">
+            <div id="particles-js"></div>
+            <div class="quote-container">
+                <h1>My Todo List</h1>
+                <p id="motivational-quote" class="typing"></p>
+            </div>
+        </header>
+        <div class="layout">
+            <div class="task-list">
+                <div class="filter-bar">
+                    <label>Filter by Priority:</label>
+                    <select id="priority-filter">
+                        <option value="all">All</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div id="task-list" class="task-grid"></div>
+            </div>
+            <div class="task-form">
+                <form id="form">
+                    <input type="text" id="title" placeholder="Task title" required>
+                    <textarea id="description" placeholder="Description"></textarea>
+                    <select id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <input type="number" id="units" placeholder="Units" min="1" value="1" required>
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
